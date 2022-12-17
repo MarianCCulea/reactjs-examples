@@ -24,7 +24,9 @@ const Navbar = (props) => {
             className={"flex p-6 rounded-lg group"}
           >
             <DropdownMenu>
-              <Link className={styles.menuItem}>ASsadasdasD</Link>
+              <Link className={styles.menuItem} to={"/Product"}>
+                ASsadasdasD
+              </Link>
               <Link className={styles.menuItem}>ASdasD</Link>
               <Link className={styles.menuItem}>ASD</Link>
               <Link className={styles.menuItem}>ASdasdsadsasaD</Link>
@@ -52,6 +54,11 @@ const Navbar = (props) => {
           <NavItemTextTry
             text={"Contact"}
             to={"/Contact"}
+            className={"flex p-6 rounded-lg group"}
+          />
+          <NavItemTextTry
+            text={"Product"}
+            to={"/products"}
             className={"flex p-6 rounded-lg group"}
           />
         </div>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Header, Footer, Tasks, AddTask, Navbar } from "./components";
-import { Home, About, Projects, Contact } from "./pages";
+import { Home, About, Projects, Contact, Product, ProductList } from "./pages";
 import Header2 from "./Header";
 import { useSelector, useDispatch } from "react-redux";
 import { loadColor } from "./redux/actions";
@@ -100,6 +100,11 @@ const App = () => {
           <Route path="/Contact" element={<Contact></Contact>} />
           <Route path="/Projects" element={<Projects />} />
           <Route path="/About" element={<About />} />
+          <Route path="/Product" element={<Product />} />
+
+          <Route exact path="/products" element={<ProductList />} />
+
+          <Route path="/products/:productId" element={<Product />} />
         </Routes>
 
         <Footer />
